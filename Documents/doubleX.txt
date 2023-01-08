@@ -1,0 +1,15 @@
+F F // swaps the value of 15 into r1
+5 // r0 + r1 (r0=r1)
+5 // r0 + r1 again (r1 doubled)
+7 // print r0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+4

@@ -1,0 +1,24 @@
+A 4C 11 // Write L
+A 55 11 // Write U
+A 4B 11 // Write K
+A 45 11 // Write E
+A 2C 11 // Write ,
+A 20 11 // Space
+A 49 11 // Write I
+A 20 11 // Space
+A 41 11 // Write A
+A 4D 11 // Write M
+A 20 11 // Space
+A 59 11 // Write Y
+A 4F 11 // Write O
+A 55 11 // Write U
+A 52 11 // Write R
+A 20 11 // Space
+A 46 11 // Write F
+A 41 11 // Write A
+A 54 11 // Write T
+A 48 11 // Write H
+A 45 11 // Write E
+A 52 11 // Write R
+A 20 11 // Space
+10 // Bell

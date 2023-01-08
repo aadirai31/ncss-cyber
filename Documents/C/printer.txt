@@ -1,0 +1,136 @@
+// wonderous 8005
+
+// main goes from 0x00 (0)   -- frame 0xC0 (192) - 0xDF
+// printStripe    0x40 (48)  -- frame 0xE0 (224) - 0xE7
+// printRow       0x70 (80)  -- frame 0xE8 (232) - 0xEF
+// input to main stored at FF (255)
+
+// 0x00
+
+D C0 // stores r0 in frame for main
+A 2 C E0 // stores width in frame for printStripe
+A 2 C E1 // stores height in frame for printStripe
+A 23 C E2 // stores ASCII value of # in frame for printStripe
+A 14 C E3 // load return address in frame for printStripe
+
+// 0x12
+
+14 40
+7 0 0 0
+0 0 0 0
+0 0 0 0 
+
+// 0x20 
+
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0 
+
+// 0x30
+
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0 
+
+// 0x40
+
+D C0 // saves r1 value in frame for main
+B 0 // clear r1 value
+F E0 C E8 F E0 // stores width in frame for printRow
+F E2 C E9 F E2 // stores stores ASCII value of # in frame for printRow
+
+// 0x50
+12 E0 // set FP to frame for printStripe
+15 1 // set r0 to height
+12 70 // go to printRow
+2 // subtract 1 from r0
+8 48 // loop back until r0 is 0
+F C0 // reset r1
+14 14  // return to main 
+
+// 0x60
+
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0 
+
+// 0x60 
+
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0 
+
+// 0x70 - printRow
+
+C E4 // saves r0 value in frame for printStripe
+A 0 // clear r0 value
+12 E8 // set FP to frame for printRow
+15 1 // set r1 to height
+12 70 // go to printRow
+2 // subtract 1 from r0
+8 48 // loop back until r0 is 0
+F C0 // reset r1
+14 14  // return to main 
+ 
+
+// 0x80
+
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0 
+
+// 0x90
+
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0 
+
+// 0xA0 
+
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0 
+
+// 0xB0
+
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0 
+
+// 0xC0
+
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0 
+
+// 0xD0
+
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0 
+
+// 0xE0 
+
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0 
+
+// 0xF0
+
+0 0 0 0
+0 0 0 0
+0 0 0 0
+0 0 0 0 
+
+

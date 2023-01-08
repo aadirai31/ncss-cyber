@@ -1,0 +1,8 @@
+// qt4001
+// put 10 into register
+1 1 1 1 1
+1 1 1 1 1
+
+//print in dec and hex
+8 9
+0

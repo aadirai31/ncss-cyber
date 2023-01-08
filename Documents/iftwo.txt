@@ -1,0 +1,15 @@
+9 E // jump to 14
+2
+2 // subtract r0 by 2
+9 
+C // if r0 = 0 then jump to C
+8 // else if r0 != 0 then jump to 9
+9
+7 // print r0
+A
+1 // put 1 in r0
+7 // print r0
+0 
+0 // halt
+A // put x into r0
+5 // number that gets checked (x)

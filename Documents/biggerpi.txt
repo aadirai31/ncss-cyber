@@ -1,0 +1,6 @@
+3 3 3 // put 3 in r1
+5 8 /// prints 3
+3 3 6 8 // prints 14
+1 8 // prints 15
+3 6 8 // prints 9
+// 6 2 8 // prints 2
